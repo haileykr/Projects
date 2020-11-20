@@ -57,7 +57,7 @@ def marker_placer(marker, available_space, mapping):
 
 # 4. Write a function that takes in a board and a mark (X or O) and then checks to see if that mark has won
 def if_won(marker):
-    if mapping[7:10] == [marker, marker, marker] or mapping[0:3] == [marker, marker, marker] or (mapping[0] == marker and mapping[3] == marker and mapping[6] == marker) or (mapping[2] == marker and mapping[5] == marker and mapping[8] == marker) or (mapping[0] == marker and mapping[4] == marker and mapping[8] == marker) or (mapping[2] == marker and mapping[4] == marker and mapping[6] == marker):
+    if mapping[7:10] == [marker, marker, marker] or mapping[0:3] == [marker, marker, marker] or (mapping[0] == mapping[3] == mapping[6] == marker) or (mapping[2] == mapping[5] == mapping[8] == marker) or (mapping[0] == mapping[4] == mapping[8] == marker) or (mapping[2] == mapping[4] == mapping[6] == marker):
         return True
     else:
         return False
