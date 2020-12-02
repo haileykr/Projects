@@ -27,4 +27,3 @@ while change != 0:
     change -= pennies
 
 print("Your changes are: \nQuarters: {}\nDimes: {}\nNickels: {}\nPennies: {}".format(quarters, dimes, nickels, pennies))
-
