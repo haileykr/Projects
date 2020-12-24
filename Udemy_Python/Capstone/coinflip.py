@@ -26,6 +26,5 @@ def main():
     print(coinFlip(numOfFlips))
 
 if __name__ == '__main__':
-
     main()
 
