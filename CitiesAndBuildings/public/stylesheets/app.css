@@ -1,0 +1,10 @@
+.card{
+    display: inline-block;
+    color: pink;
+    column-break-inside: avoid;
+}
+
+h1 {
+    text-align: center;
+    color: pink;
+}
