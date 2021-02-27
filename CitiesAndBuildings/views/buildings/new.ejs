@@ -1,0 +1,67 @@
+<% layout('layouts/boilerplate') %>
+
+    <div class="row">
+        <div class="col-md-6  offset-md-3">
+            <div class="card shadow">
+                <h1 class="card-title text-center">
+                    New Building
+                </h1>
+                <div class="card-body">
+                    <form action="/buildings" method="POST" novalidate enctype="multipart/form-data" class="validated-form">
+                        <div class="mb-3">
+                            <label class="form-label" for="name">Name</label>
+                            <input class="form-control" type="text" id="name" name="building[name]" required>
+                            <div class="valid-feedback">Looks Good!</div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="location">Location</label>
+                            <input class="form-control" type="text" id="location" name="building[location]" required>
+                            <div class="valid-feedback">Looks Good!</div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="architect">Architect</label>
+                            <input class="form-control" type="text" id="architect" name="building[architect]" required>
+                            <div class="valid-feedback">Looks Good!</div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="engineer">Engineer</label>
+                            <input class="form-control" type="text" id="engineer" name="building[engineer]" required>
+                            <div class="valid-feedback">Looks Good!</div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="year">Year</label>
+                            <input class="form-control" type="number" id="year" name="building[year]" required>
+                            <div class="valid-feedback">Looks Good!</div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="height">Height</label>
+                            <input class="form-control" type="number" id="height" name="building[height]" required>
+                            <div class="valid-feedback">Looks Good!</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label" for="description">Description</label>
+                            <input class="form-control" type="text" id="location" name="building[description]" required>
+                            <div class="valid-feedback">Looks Good!</div>
+                        </div>
+                        <!-- <div class="mb-3">
+                            <label class="form-label" for="facts">Facts</label>
+                            <input class="form-control" type="text" id="facts" name="building[facts]" required>
+                            <div class="valid-feedback">Looks Good!</div>
+                        </div> -->
+                        <div class="mb-3">
+                            <label for="image" class="form-label">Add images</label>
+                            <input class="form-control" type="file" id="image" name="image" multiple>
+                        </div>
+                        <div class="mb-3">
+                            <button class="btn btn-success">Add A Building</button>
+                        </div>
+                       
+                    </form>
+                    <div>
+                        <a href="/buildings">All Buildings</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

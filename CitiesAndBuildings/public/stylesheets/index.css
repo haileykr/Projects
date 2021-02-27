@@ -1,0 +1,16 @@
+#masonry {
+    column-count: 3;
+    column-gap: 15px;
+}
+
+@media screen and (max-width: 992px){
+    #masonry {
+        column-count: 2;
+    }
+}
+
+@media screen and (max-width: 768px){
+    #masonry {
+        column-count: 1;
+    }
+}

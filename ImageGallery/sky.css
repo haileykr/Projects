@@ -1,0 +1,30 @@
+.diagram {
+    height: 100vh;
+}
+.paral {
+    margin: 0;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-position: center; 
+    transform-origin: center;
+}
+
+.towers {
+    position:absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-size: cover;
+    background-image: url("https://www.skyscrapercenter.com/img/100-tallest/2015/Header2.png");
+}
+
+.clouds {
+    position: relative;
+    height: 30%;
+    background-size: fill;
+    background-repeat: no-repeat;
+    background-image: url("https://www.pngitem.com/pimgs/m/172-1728232_cloud-png-image-transparent-background-cloud-png-png.png");
+    z-index: 2;
+    opacity: 0.3;
+}

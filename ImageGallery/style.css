@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #ecf0f3;
+    text-align: center;
+    font-family:'Delius Unicase', cursive;
+}
+
+#intro {
+    height: 80vh;
+    background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),url(https://images.unsplash.com/photo-1502920514313-52581002a659?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1047&q=80);
+    background-size: cover;
+    background-position: center;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: 0.3s;
+    border-radius: 8px;
+}
+
+.container {
+    width: 100%;
+    /* height: 100vh;/ */
+}
+
+.cloud {
+    background-image: url("https://assets.codepen.io/557388/clouds.png");
+    background-position: center;
+    background-size: cover;
+    z-index: 2;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5em;
+    color: rgba(0,0,0,0)
+}
+
+.card:hover  .center {
+    color: black;
+}
+
+.card {
+    border-radius: 12px;
+    padding: 3%;
+    margin-bottom: 6%;
+    background: #fff;
+    box-shadow: 10px 10px 24px -12px rgba(0,0,0,0.75);
+    transition: 0.3s;
+}
+
+.card:hover{
+    box-shadow: inset 10px 10px 24px -12px (0,0,0,0.75);
+}
+
+.card:hover img{
+    transform: scale(0.8);
+    opacity: 0.5;
+}

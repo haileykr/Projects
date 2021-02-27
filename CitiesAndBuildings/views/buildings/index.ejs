@@ -1,23 +1,34 @@
 <% layout('layouts/boilerplate') %>
+    <link rel="stylesheet" href="/stylesheets/index.css">
+    <div id="cluster-map"></div>
     <div class="container">
-    <h1>All Listed Buildings</h1>
-
-    <div class="row" style="justify-content: center;">
-    <% for (let building of buildings) { %>
-        <div class="card m-3" style="width: 18rem; display: inline-block">
-            <img class="card-img-top"
-                src="https://static.dezeen.com/uploads/2019/01/chrysler-building-for-sale-news-architecture-new-york-city-dezeen-2364-shutterstock-65007532-sq.jpg"
-                alt="Card image cap">
-            <div class="card-body" >
-                <h5 class="card-title">
-                    <%=building.title%>
-                </h5>
-                <p class="card-text text-muted">
-                    <%=building.description%>
-                </p>
-                <a href="/buildings/<%=building.id%>" class="btn btn-light">Show</a>
-            </div>
+        <h1>All Listed Buildings</h1>
+        <!-- <div class="row d-flex justify-content-center"> -->
+        <div id = "masonry">
+            <% for (let building of buildings) { %>
+                <!-- <div class="d-inline-block col-xs-12 col-md-6 col-lg-4 py-3"> -->
+                <div class= "d-inline-block">
+                    <div class="card m-3">
+                        <img class="card-img-top"                      
+                        src ="<%= building.images[0].url %> "
+                            alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <%=building.name%>
+                            </h5>
+                            <p class="card-text text-muted">
+                                <%=building.description%>
+                            </p>
+                            <a href="/buildings/<%=building._id%>" class="btn btn-light">Show</a>
+                        </div>
+                    </div>
+                </div>
+            <% } %>
         </div>
-    <% } %>
     </div>
-    </div>
+
+    <script>
+        const mapToken = '<%-process.env.MAPBOX_TOKEN%>'
+        const buildings = { features: <%-JSON.stringify(buildings)%>}
+    </script>
+    <script src="/javascripts/clusterMap.js"></script>

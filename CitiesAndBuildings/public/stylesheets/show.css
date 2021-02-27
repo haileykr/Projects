@@ -1,0 +1,14 @@
+#factsCarousel{
+    width: 100%;
+    height: 150px;
+}
+
+#factsCarousel .carousel-control-next,
+#factsCarousel .carousel-control-prev{
+    filter: invert(100%);
+}
+
+#factsCarousel {
+    font-family: 'Tangerine', cursive;
+    font-size: 2em;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        body{
+            margin: 0;
+            color: white;
+        }
+        .scene{
+            height: 100vh;
+            overflow: hidden;
+            background-size: cover;
+            
+            background-attachment: fixed;
+        }
+        .scene.one{
+            background-image:url("https://images.unsplash.com/photo-1464802686167-b939a6910659?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=733&q=80");
+        }
+        .scene.two{
+            background-image:url("https://images.unsplash.com/photo-1462332420958-a05d1e002413?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1040&q=80");
+        }
+        .scene.three{
+            background-image:url("https://images.unsplash.com/photo-1465101162946-4377e57745c3?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=757&q=80");
+        }
+        .scene header{
+            max-width: 60%;
+            position: relative;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            font-size: 1rem;
+            text-align:center;
+        }
+        .scene header h1{
+            font-size:1.5rem;
+            margin-bottom: 1rem;    
+        }
+        .scene header h1:after{
+            content:'';
+            width:11rem;
+            border-bottom: 1px solid white;
+            display: block;
+            margin: 0 auto;
+            margin-top: 1rem;
+        }
+        
+    </style>
+</head>
+<body>
+    <section class="scene one">
+        <header>
+            <h1>Lorem ipsum dolor sit amet.</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam rerum fugiat quo possimus, quasi dolore alias placeat quis enim, debitis, repudiandae nam neque veritatis deserunt asperiores a magni quibusdam vel.</p>
+        </header>
+
+    </section>
+    <section class="scene two">
+        <header>
+            <h1>Lorem ipsum dolor sit amet.</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam rerum fugiat quo possimus, quasi dolore alias placeat quis enim, debitis, repudiandae nam neque veritatis deserunt asperiores a magni quibusdam vel.</p>
+        </header>
+
+    </section>
+    <section class="scene three">
+        <header>
+            <h1>Lorem ipsum dolor sit amet.</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam rerum fugiat quo possimus, quasi dolore alias placeat quis enim, debitis, repudiandae nam neque veritatis deserunt asperiores a magni quibusdam vel.</p>
+        </header>
+
+    </section>
+</body>
+</html>

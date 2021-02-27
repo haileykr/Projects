@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="tree-fontello/css/fontello.css">
+    <style>
+        .tree{
+            color: rgb(54, 51, 51);
+        }
+        .tree, .tree ul{
+            list-style: none;
+            padding-left: 20px;
+        }
+        .tree label:before{
+            content:'\f256';
+            font-family: fontello;
+        }
+        .tree label{
+            cursor: pointer;
+        }
+        .tree *:before{
+            width: 17px;
+            display: inline-block;
+            height: 17px;
+        }
+        .tree a{
+            text-decoration: none;
+            color:gray;
+        }
+        .tree a:before{
+            content:'\e800';
+            font-family:fontello;
+        }
+        .tree input[type="checkbox"]{
+            display: none;
+        }
+        .tree input[type="checkbox"]:checked~ul{
+            display: none;
+        }
+
+        
+        .tree input[type="checkbox"]:checked+label:before{
+            content:'\f255';
+        }
+    </style>
+</head>
+<body>
+    <ul class="tree">
+        <li>
+            <input type="checkbox"id="root">
+            <label for="root"><i class="far fa-hand-rock"></i>ROOT</label>
+            <ul>
+                <li><a href="https://www.google.com"><i class="fas fa-link"></i>node 1</a></li>
+                <li><a href="https://www.google.com"><i class="fas fa-link"></i>node 2</a></li>
+                <li>
+                    <input type="checkbox"id="node3">
+                    <label for="node3">ROOT</label>
+                    <ul>
+                        <li><a href="https://www.google.com"><i class="fas fa-link"></i>node a</a></li>
+                        <li><a href="https://www.google.com"><i class="fas fa-link"></i>node b</a></li>
+                        <li><a href="https://www.google.com"><i class="fas fa-link"></i>node c</a></li>
+                    </ul>
+            </ul>
+        </li>
+    </ul>
+</body>

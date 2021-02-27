@@ -1,0 +1,85 @@
+<% layout('layouts/boilerplate') %>
+    <div class="row">
+        <div class="col-md-6  offset-md-3">
+            <div class="card shadow">
+                <h1 class="card-title text-center">
+                    Edit Building
+                </h1>
+                <div class="card-body">
+                    <form action="/buildings/<%= building._id %>?_method=PUT" method="POST" novalidate
+                        enctype="multipart/form-data" class="validated-form">
+                        <div class="mb-3">
+                            <label class="form-label" for="name">Name</label>
+                            <input class="form-control" type="text" id="name" name="building[name]" required
+                                value="<%= building.name %>">
+                            <div class="valid-feedback">Looks Good!</div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="location">Location</label>
+                            <input class="form-control" type="text" id="location" name="building[location]" required
+                                value="<%=building.location%>">
+                            <div class="valid-feedback">Looks Good!</div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="architect">Architect</label>
+                            <input class="form-control" type="text" id="architect" name="building[architect]" required
+                                value="<%= building.architect%>">
+                            <div class="valid-feedback">Looks Good!</div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="engineer">Engineer</label>
+                            <input class="form-control" type="text" id="engineer" name="building[engineer]" required
+                                value="<%= building.engineer%>">
+                            <div class="valid-feedback">Looks Good!</div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="year">Year</label>
+                            <input class="form-control" type="number" id="year" name="building[year]" required
+                                value="<%= building.year%>">
+                            <div class="valid-feedback">Looks Good!</div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="height">Height</label>
+                            <input class="form-control" type="number" id="height" name="building[height]" required
+                                value="<%= building.height%>">
+                            <div class="valid-feedback">Looks Good!</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label" for="description">Description</label>
+                            <input class="form-control" type="text" id="location" name="building[description]" required
+                                value="<%= building.description%>">
+                            <div class="valid-feedback">Looks Good!</div>
+                        </div>
+                        <!-- <div class="mb-3">
+                            <label class="form-label" for="facts">Facts</label>
+                            <input class="form-control" type="text" id="facts" name="building[facts]" required
+                                value="< %= building.facts%>">
+                            <div class="valid-feedback">Looks Good!</div>
+                        </div> -->
+                        <div class="mb-3">
+                            <label for="image" class="form-label">Add more images</label>
+                            <input class="form-control" type="file" id="image" name="image" multiple>
+                        </div>
+
+                        <div class="mb-3">
+                            <% building.images.forEach(function(img, index){ %>
+                                <img src="<%= img.thumbnail%>" alt="" class="img-thumbnail">
+                                <div class="form-check-inline">
+                                    <input type="checkbox" id="image-<%= index%>" name="deleteImages[]"
+                                        value="<%= img.filename%>">
+                                </div>
+                                <label for="image-<%= index%>">Delete?</label>
+                                <% }) %>
+                        </div>
+                        <div class="mb-3">
+                            <button class="btn btn-success">Update Building</button>
+                        </div>
+                    </form>
+                    <div>
+                        <a href="/buildings/<%= building._id%>">Back To Buildings</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

@@ -1,10 +1,8 @@
-.card{
-    display: inline-block;
-    color: pink;
-    column-break-inside: avoid;
+#cluster-map{
+    width:100%;
+    height:500px;
 }
-
-h1 {
-    text-align: center;
-    color: pink;
+#map {
+    width:100%;
+    height:300px;
 }
