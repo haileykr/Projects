@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lazy Loading Demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <style>
+        .image {
+            display: block;
+            margin: 150px auto 150px auto;
+            width: 600px;
+            height: 600px;
+            object-fit: cover;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container justify-content-center text-center">
+        <h1>Lazy-Loading Using Intersection Observer</h1>
+        <img class="image" id="image1" data-img="https://source.unsplash.com/featured?nature" src="" alt="">
+        <img class="image" id="image2" data-img="https://source.unsplash.com/featured?camping" src="" alt="">
+
+        <h1>Lazy-Loading Using Loading Attribute</h1>
+        <noscript class="loading-lazy">
+            <img class="image" src="https://source.unsplash.com/featured?trees" loading="lazy" alt="">
+        </noscript>
+        <noscript class="loading-lazy">
+            <img class="image" src="https://source.unsplash.com/featured?garden" loading="lazy" alt="">
+        </noscript>
+        <noscript class="loading-lazy">
+            <img class="image" src="https://source.unsplash.com/featured?hiking" loading="lazy" alt="">
+        </noscript>
+        <noscript class="loading-lazy">
+            <img class="image" src="https://source.unsplash.com/featured?beach" loading="lazy" alt="">
+        </noscript>
+        <noscript class="loading-lazy">
+            <img class="image" src="https://source.unsplash.com/featured?fruit" loading="lazy" alt="">
+        </noscript>
+    </div>
+
+</body>
+<script>
+    let options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.25
+    };
+
+    let callback = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting
+                && entry.target.className === 'image') {
+                let imageUrl = entry.target.getAttribute('data-img');
+                if (imageUrl) {
+                    entry.target.src = imageUrl;
+                    observer.unobserve(entry.target);
+                }
+            }
+        });
+    }
+    let observer = new IntersectionObserver(callback, options)
+    observer.observe(document.querySelector('#image1'))
+    observer.observe(document.querySelector('#image2'))
+</script>
+
+<script src="loading_attribute_polyfills.js"></script>
+
+</html>

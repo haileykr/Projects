@@ -6,7 +6,7 @@
                     class="card-img-top">
                 <div class="card-body">
                     <h4 class="card-title">Log In</h4>
-                    <form action="/login" method="POST" class="validated-form" novalidate>
+                    <form action="/login" method="POST" class="validated-form" novalidate autocomplete="on">
                         <div class="mb-3">
                             <label for="username" class="form-label">Username</label>
                             <input class="form-control" name="username" id="username" type="text" autofocus required>
@@ -16,7 +16,7 @@
                         </div>
                         <div class="mb-3">
                             <label for="password" class="form-label">Password</label>
-                            <input class="form-control" name="password" id="password" type="password" required>
+                            <input class="form-control" autocomplete = "off" name="password" id="password" type="password" required>
                             <div class="valid-feedback">
                                 Looks good!
                             </div>

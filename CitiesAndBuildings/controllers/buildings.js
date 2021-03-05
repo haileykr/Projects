@@ -6,8 +6,16 @@ const geocoder = mbxGeocoding({accessToken:mapToken});
 const {cloudinary} = require('../cloudinary');
 
 module.exports.index = async (req, res) => {
-    const buildings = await Building.find({});
-    res.render('buildings/index', {buildings});
+    // Only take the first word
+    if (req.query.search){
+        const search = req.query.search.split(" ")[0];
+        const query = search[0].toUpperCase() + search.slice(1).toLowerCase();
+        const buildings = await Building.find({name:  {$regex: query}});
+        res.render('buildings/index', {buildings});
+    } else {
+        const buildings = await Building.find({});
+        res.render('buildings/index', {buildings});
+    }
 }
 module.exports.showBuilding = async (req,res)=>{
     const building = await Building.findById(req.params.id).populate("facts").populate("author");

@@ -3,29 +3,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/stylesheets/show.css">
 
-    <div class="row">
+    <div class="row mb-5">
         <!-- <div class="col-6 offset-3"> -->
         <div class="col-4">
-            <div id="imageCarousel" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <% building.images.forEach((img, index)=> {%>
-                        <div class="carousel-item <%= index === 0? 'active': ''%>">
-                            <img src="<%= img.url%>" class="d-block w-100" alt="">
-                        </div>
-                        <% }) %>
-                </div>
-                <% if (building.images.length>1){ %>
-                    <a class="carousel-control-prev" href="#imageCarousel" role="button" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#imageCarousel" role="button" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </a>
-                    <% } %>
-            </div>
-            <div id="map" class="mt-5" style='width:100%; height: 300px;'></div>
+            <div id="map" ></div>
         </div>
 
         <div class="col-8">
@@ -83,12 +64,33 @@
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
                     </a>
-                    <% } %>
+                <% } %>
 
             </div>
             <div class="text-end">
                 <a href="/buildings/<%=building.id%>/funfacts" class="btn btn-light bg-light btn-sm">Add Fun Facts</a>
             </div>
+        </div>
+    </div>
+    <div class="row mb-5">
+        <div id="imageCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <% building.images.forEach((img, index)=> {%>
+                    <div class="carousel-item <%= index === 0? 'active': ''%>">
+                        <img src="<%= img.url%>" class="d-block " alt="">
+                    </div>
+                <% }) %>
+            </div>
+            <% if (building.images.length>1){ %>
+                <a class="carousel-control-prev" href="#imageCarousel" role="button" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#imageCarousel" role="button" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </a>
+                <% } %>
         </div>
     </div>
     <script>

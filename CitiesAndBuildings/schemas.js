@@ -33,8 +33,9 @@ module.exports.buildingSchema = Joi.object({
     }).required(),
     deleteImages: Joi.array()
 });
+
 module.exports.factSchema = Joi.object({
     fact: Joi.object ({
-        body: Joi.string().escapeHTML()
+        body: Joi.string().escapeHTML(),
     }).required()
 });

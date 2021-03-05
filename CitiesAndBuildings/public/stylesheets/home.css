@@ -1,0 +1,69 @@
+body{
+    margin: 0;
+    color:white;
+    text-shadow: 0 0 10px rgb(48, 56, 56);
+}
+
+#mainNavbar *, #mainNavbar * * {
+    color:darkslategray;
+    transition: 0.5s;
+}
+
+#mainNavbar .nav-link:hover {
+    color: darksalmon;
+}
+
+#mainNavbar.scrolled {
+    background: linear-gradient(to right, rgba(233,196,106,0.5), rgba(17,138,178,0.150));
+    color: white;
+}
+
+.scene{
+    height: 100vh;
+    overflow: hidden;
+    background-size: cover;
+    
+    background-attachment: fixed;
+}
+
+.scene.one{
+    background-image:url("https://res.cloudinary.com/dlhgkcxol/image/upload/v1614335719/CitiesAndBuildings/photo-1470219556762-1771e7f9427d_juflqd.jpg");
+}
+
+.scene.two{
+    background-image:url("https://res.cloudinary.com/dlhgkcxol/image/upload/v1614335917/CitiesAndBuildings/photo-1535189043414-47a3c49a0bed_yfxihh.jpg");
+}
+
+.scene.three{
+    background-image:url("https://res.cloudinary.com/dlhgkcxol/image/upload/v1614676944/CitiesAndBuildings/photo-1557785988-de90e4d2e461_pohrxk.jpg");
+}
+
+.scene header{
+    max-width: 60%;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 1rem;
+    text-align:center;
+}
+
+.scene header h1{
+    font-size:2rem;
+    margin-bottom: 1rem;    
+}
+
+.scene header h1:after{
+    content:'';
+    width:11rem;
+    border-bottom: 1px solid white;
+    display: block;
+    margin: 0 auto;
+    margin-top: 1rem;
+}
+
+.footer, .footer span {
+    text-align: center;
+    background-color:#867b7f;
+    font-family: serif;
+}

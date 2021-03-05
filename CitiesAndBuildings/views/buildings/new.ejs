@@ -2,15 +2,15 @@
 
     <div class="row">
         <div class="col-md-6  offset-md-3">
-            <div class="card shadow">
-                <h1 class="card-title text-center">
+            <div class="card mb-5 shadow">
+                <h1 class="mt-3 card-title text-center">
                     New Building
                 </h1>
                 <div class="card-body">
                     <form action="/buildings" method="POST" novalidate enctype="multipart/form-data" class="validated-form">
                         <div class="mb-3">
                             <label class="form-label" for="name">Name</label>
-                            <input class="form-control" type="text" id="name" name="building[name]" required>
+                            <input autofocus class="form-control" type="text" id="name" name="building[name]" required>
                             <div class="valid-feedback">Looks Good!</div>
                         </div>
                         <div class="mb-3">

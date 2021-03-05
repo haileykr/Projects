@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="/stylesheets/home.css">
+</head>
+
+<body>
+    <section class="container-fluid px-0">
+        <nav id="mainNavbar" class="navbar navbar-dark navbar-expand-md py-0 px-3 fixed-top">
+            <a href="" class="navbar-brand">UrBuildingMap</a>
+            <button class="navbar-toggler" aria-label="Toggle Navigation" data-toggle="collapse"
+                data-target="#navLinks">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navLinks">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="/buildings" class="nav-link">Go to Building Map</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <section class="scene one">
+            <header>
+                <h1>Explore Buildings</h1>
+                <p>Check out brief information about fascinating buildings over the world.<br>Explore their location, architect, engineer, height, and fun facts to fulfill your curiosity.</p>
+            </header>
+
+        </section>
+        <section class="scene two">
+            <header>
+                <h1>Add a building</h1>
+                <p>Want to add info on the building of your choice?<br>Sign up and feel free to add more!</p>
+            </header>
+
+        </section>
+        <section class="scene three">
+            <header>
+                <h1>"We Shape Our Building.<br>Therefore, They Shape Us." </h1>
+                <p>- Sir. Winston Churchill</p>
+            </header>
+
+        </section>
+    </section>
+    <script src="/javascripts/scrollEffect.js" ></script>
+</body>
+
+<%- include('./partials/footer')  %>
+</html>

@@ -23,10 +23,16 @@ module.exports.createFact = async (req, res) => {
     const fact = new Fact(req.body.fact);
     fact.author = req.user._id;
     building.facts.push(fact);
+
+    const today=new Date();
+    const time = today.getHours() + ':' + today.getMinutes()+ ':' + today.getSeconds();
+    const date = today.getFullYear() + '-' + today.getMonth()+ '-' + today.getDate();
+    fact.additionTime = date + ' ' + time;
+
     await fact.save();
     await building.save();
     req.flash('success', 'Successfully added a fun fact.');
-    res.redirect(`/buildings/${req.params.id}`);
+    res.redirect (`/buildings/${req.params.id}/facts`); 
 };
 module.exports.deleteFact = async (req, res) => {
     const {id, factId} = req.params;
@@ -37,3 +43,9 @@ module.exports.deleteFact = async (req, res) => {
     req.flash('success', 'Successfully deleted the fun fact.');
     res.redirect (`/buildings/${id}/funfacts`);
 };
+
+module.exports.getTime = (req, res) => {
+    const today=new Date();
+    const time = today.getHours() + ':' + today.getMinutes()+ ':' + today.getSeconds();
+    const date = today.getFullYear() + '-' + today.getMonth()+ '-' + today.getDate();
+}

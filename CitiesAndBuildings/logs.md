@@ -115,5 +115,35 @@
 
 ~> combined pure css + bootstrap as implementing masonry layout in bootstrap is unstable
 
+02/28
+
+- Search by Name added
+~> a regular form: input is entered as a query string
+(ex. ...?search=Chrysler)
+~> how to find by name in mongo db
+(https://stackoverflow.com/questions/3305561/how-to-query-mongodb-with-like)
+
+~> to make only the first letter of the first letter capitalized
+(https://capitalizemytitle.com/ufaqs/how-to-uppercase-the-first-letter-of-a-string-in-javascript/#:~:text=To%20uppercase%20only%20the%20first,charAt(0).)
+
+~> Mongoose -Model.find()에서의 방법이 mongodb에서의 db.collections.find({})와 완전히 같지는 않음을 기억.
+(https://masteringjs.io/tutorials/mongoose/find)
+
+~> final solution: .find({name: {$regex: "query"}})였다!
+
+03.01
+- added lazy loading
+(https://www.youtube.com/watch?v=ieIdDAHDaiM)
+: use the Intersection Observer
+
+
+: or just with loading = "lazy" attribute!
+(https://www.youtube.com/watch?v=AActXSWxsRo)
+
+: MDN documents for all options!
+(https://developer.mozilla.org/en-US/docs/Web/Performance/Lazy_loading)
+~> polyfill module added!
+
+: good to define width and height for lazily-loaded images, as they give the blank space and do not cause 'jumps' in contents when the images are loaded
 
 
