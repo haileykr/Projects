@@ -1,4 +1,4 @@
-# Citie And Buildings
+# Cities And Buildings
 Web Application for Architects, Engineers, and All Other Building-Fanatics.
 
 [citiesandbuildings.herokuapp.com](citiesandbuildings.herokuapp.com)
