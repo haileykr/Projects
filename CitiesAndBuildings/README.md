@@ -1,7 +1,7 @@
 # Cities And Buildings
 Web Application for Architects, Engineers, and All Other Building-Fanatics.
 
-[citiesandbuildings.herokuapp.com](citiesandbuildings.herokuapp.com)
+[citiesandbuildings.herokuapp.com](https://citiesandbuildings.herokuapp.com)
 
 ![home](../imgs/CAB_image.png)
 
