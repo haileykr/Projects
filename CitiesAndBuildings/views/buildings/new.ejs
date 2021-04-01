@@ -12,6 +12,7 @@
                             <label class="form-label" for="name">Name</label>
                             <input autofocus class="form-control" type="text" id="name" name="building[name]" required>
                             <div class="valid-feedback">Looks Good!</div>
+                            <div class="btn btn-primary btn-small mt-3 wikiBtn">Get Info from Wikipedia</div>
                         </div>
                         <div class="mb-3">
                             <label class="form-label" for="location">Location</label>
@@ -41,7 +42,7 @@
 
                         <div class="mb-3">
                             <label class="form-label" for="description">Description</label>
-                            <input class="form-control" type="text" id="location" name="building[description]" required>
+                            <input class="form-control" type="text" id="description" name="building[description]" required>
                             <div class="valid-feedback">Looks Good!</div>
                         </div>
                         <!-- <div class="mb-3">
@@ -64,4 +65,12 @@
                 </div>
             </div>
         </div>
+        <div class="col-3">
+            <div class="container wikiI">
+                <h5>Wiki Info</h5>
+                <p class="data"></p>
+            </div>
+        </div>
     </div>
+
+    <script  src="/javascripts/seedInfo.js"></script>

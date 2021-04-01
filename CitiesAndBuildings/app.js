@@ -69,6 +69,7 @@ const scriptSrcUrls = [
     "https://api.mapbox.com/",
     "https://kit.fontawesome.com/",
     "https://cdnjs.cloudflare.com/",
+    "https://en.wikipedia.org/api/",
     "https://cdn.jsdelivr.net"
 ];
 const styleSrcUrls = [
@@ -83,7 +84,8 @@ const connectSrcUrls = [
     "https://api.mapbox.com/",
     "https://a.tiles.mapbox.com/",
     "https://b.tiles.mapbox.com/",
-    "https://events.mapbox.com/"
+    "https://events.mapbox.com/",
+    "https://en.wikipedia.org/api/"
 ];
 const fontSrcUrls = [
     'https://cdn.jsdelivr.net/npm/',

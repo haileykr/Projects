@@ -31,8 +31,9 @@ module.exports.createFact = async (req, res) => {
 
     await fact.save();
     await building.save();
+    req.body.fact = ''
     req.flash('success', 'Successfully added a fun fact.');
-    res.redirect (`/buildings/${req.params.id}/facts`); 
+    res.redirect (`/buildings/${req.params.id}/funfacts`); 
 };
 module.exports.deleteFact = async (req, res) => {
     const {id, factId} = req.params;

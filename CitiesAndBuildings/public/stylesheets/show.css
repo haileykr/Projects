@@ -18,6 +18,10 @@
     border-radius: 5px;
 }
 
+#imageCarousel .carousel-inner .d-block{
+    margin: auto;
+}
+
 .carousel-item img {
     max-width: 100%;
     object-fit: contain;

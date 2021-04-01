@@ -146,4 +146,8 @@
 
 : good to define width and height for lazily-loaded images, as they give the blank space and do not cause 'jumps' in contents when the images are loaded
 
+03.10
+- added a "get info from wikipedia" button to new buildings page
+: using Wikipedia REST Api
+
 

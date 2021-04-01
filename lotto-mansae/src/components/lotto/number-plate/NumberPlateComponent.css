@@ -1,0 +1,17 @@
+.number-plate-contents{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.number-button{
+    width: 200px;
+    height: 50px;
+    color: white;
+    background-color: steelblue;
+    margin: auto 10px;
+    font-size: 20px;
+    outline: none;
+    cursor: pointer;
+}

@@ -1,0 +1,12 @@
+
+.lotto-random-template{
+    margin: auto;
+    width: auto;
+    height: 100vh;
+}
+
+
+.lotto-random-main{
+    width: auto;
+    display: flex;
+}

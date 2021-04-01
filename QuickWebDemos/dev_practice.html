@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Click to get the current Bitcoin Price!</h1>
+    <button id="btn-bitc">CLICK</button>
+    <div id="bitc"></div>
+
+    <h1>Click to get a Dad Joke!</h1>
+    <button id="btn-joke">CLICK</button>
+    <div id="joke"></div>
+
+    <script>
+        const price = document.querySelector('#bitc');
+        const btnPrice = document.querySelector('#btn-bitc');
+        const addBitcoinPrice = async () => {
+            const curr = await fetchBitcoinPrice();
+            console.log(curr)
+
+            price.innerText = curr;
+        }
+        const fetchBitcoinPrice = async () => {
+            try{
+                const res = await fetch('https://api.cryptonator.com/api/ticker/btc-usd');
+                const data = await res.json();
+                
+                return data.ticker.price;
+            } catch (e) {
+                console.log(e)
+            }
+        };
+        const jokes = document.querySelector('#joke');
+        const btnJoke = document.querySelector('#btn-joke');
+        const addNewJoke = async () => {
+            const jokeText = await getDadJoke();
+            const newLI = document.createElement('LI');
+            newLI.append(jokeText);
+            jokes.append(newLI);
+        }
+        const getDadJoke = async () => {
+            try {
+                const res = await fetch('https://icanhazdadjoke.com/', {headers: {'Accept':'application/json'}});
+                console.log(res);
+                const data = await res.json();
+
+                return data.joke;
+            } catch(e) {
+                console.log(e);
+            }
+        }
+        
+        btnPrice.addEventListener('click',addBitcoinPrice);
+        btnJoke.addEventListener('click',addNewJoke);
+
+    </script>
+</body>
+</html>
