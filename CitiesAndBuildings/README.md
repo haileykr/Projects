@@ -11,10 +11,10 @@ Web Application for Architects, Engineers, and All Other Building-Fanatics.
 - Add fun facts to buildings!
 
 2. Register As a User to Add More
-- Once registered, you can add more builidngs and edit / delete them
+- Once registered, you can add more buildings and edit / delete them
 
 3. Filter Buildings per Various Criteria
-- Filter by building name, (to be completed from here)height, architect, and engineer.
+- Filter by building name, *(to be completed from here)*height, architect, and engineer.
 
 ## Tech Stack
 ![tech_stack](../imgs/CAB_tech_stack.png)
@@ -44,6 +44,6 @@ Web Application for Architects, Engineers, and All Other Building-Fanatics.
   * _multer_ to parse multipart form for file uploads
   * _mapbox_ to show maps with geocoded locations of buildings
 
-#### Deloyment
+#### Deployment
 - App deployed on _heroku_
 - Heroku was chosen for a relatively easy upload, considering it provides PaaS (Platform as a Service) and handles infrastructure operations. 
