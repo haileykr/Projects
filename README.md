@@ -1,7 +1,7 @@
 # Static Web Pages
-> Compilation of quick static web pages I created
+Compilation of quick static web pages I created
 <br>
-> Simple web pages built on HTML + CSS + client-side JS, with minimal additional features
+Simple web pages built on HTML + CSS + client-side JS, with minimal additional features
 
 <br>
 
@@ -35,4 +35,3 @@
 - Retrieve tv shows with titles containing keyword, using [TV Maze API](https://www.tvmaze.com/api)
 - Implemented modal using pure CSS
 - **Link** - [TV Show Search](../../../2021/03/31/tvShows.html){:target="_blank"}
-
