@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Editor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h2>Upload Your Photo</h2>
+    <div class="container">
+        <div class="wrapper">
+            <input type="file" name="files" id="images" style="display:none">
+            <!-- <input type="file" name="files" id="images" style="display:none"directory webkitdirectory> -->
+            <input type="button" id="imgbtn" onclick="document.querySelector('#images').click()" value="Upload Img">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="showImg">
+            <img id = "uploadedImg" src="" alt="Uploaded IMG">
+        </div>
+    </div>
+    <div class="row" >
+        <div class="preview">
+        <div class="col"><img src="" alt="" class="previews" id="contrast"><a id="download1">Download</a></div>
+        <div class="col"><img src="" alt=""class="previews" id = "grayscale"><a id="download2">Download</a></div>
+        <div class="col"><img src="" alt=""class="previews" id = "sepia"><a id="download3">Download</a></div>
+        <div class="col"><img src="" alt=""class="previews" id = "edge"><a id="download4">Download </a></div>
+    </div>
+    </div>
+
+</body>
+<script src="app.js"></script>
+<script>
+
+        // memory-leak problem
+        // const element = URL.createObjectURL(img.files[0]);
+        // console.log(element)
+
+        // get files - for multiple, from a folder
+        // for (const key in img.files) {
+        //     if (img.files.hasOwnProperty(key)) {
+        //         const element = img.files[key].webkit;
+        //         console.log(element)
+
+        //         //if (element.type === 'image/jpeg' || element.type === 'images/png'){
+
+        //         let img = createImg(element.webkitRelative);
+        //         //arrImg[key] = img;
+        //          anothercontainer.appendChild(img)
+
+        //         }
+        //     }
+        // }
+
+    //create images with source attribute
+    // const createImg = (imgsrc) => {
+    //     let imgCon = document.createElement('img');
+    //     imgCon.setAttribute('src',imgsrc);
+    //     imgCon.className = 'img';
+    //     return imgCon;
+    // }
+
+        //animate image
+        // with animate.css cdn at head
+        // let i = 0;
+        // let clearTime = setInterval(() => {
+        //     arrImg[i].setAttribute('style','display:initial');
+        //     arrImg[i].classList.add('animated','zoom');
+        //     i++;
+        //     i == arrImg.length? clearInterval(clearTime) : undefined
+        // },200)
+</script>
+
+</html>
