@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Click Me! - Mojs Demo</title>
 </head>
+
 <body>
     <script src="https://cdn.jsdelivr.net/npm/@mojs/core"></script>
     <script>
         var c1 = new mojs.Shape({
             shape: 'circle',
-            radius: {0:'rand(0,50)'},
+            radius: { 0: 'rand(0,50)' },
             scale: 1,
             // left: '50%',
             // top: '50%',
@@ -19,21 +21,22 @@
             // top:"rand(0%,100%)",
             // x: {'-100':100},
             // y: -100,    
-            left:0,
-            top:0,
+            left: 0,
+            top: 0,
             fill: 'green',
             stroke: 'yellow',
-            strokeWidth:"rand(0,30)",
+            strokeWidth: "rand(0,30)",
             // isShowStart: true
-            duration:'rand(0,1000)',
+            duration: 'rand(0,1000)',
             delay: 0
         })
-        document.addEventListener('click', function(e){
+        document.addEventListener('click', function (e) {
             // c1.play();
             // c1.replay();
-            c1.generate().tune({x:e.pageX, y:e.pageY}).replay(); 
+            c1.generate().tune({ x: e.pageX, y: e.pageY }).replay();
         })
     </script>
-    
+
 </body>
+
 </html>

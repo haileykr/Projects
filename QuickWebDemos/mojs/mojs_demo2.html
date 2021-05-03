@@ -24,23 +24,21 @@
         // first.el.style.border = "1px solid red";
 
         var seconds = [];
-        var colors = ['deeppink', 'magenta','yellow', 'tomato'];
+        var colors = ['deeppink', 'magenta', 'yellow', 'tomato'];
         for (var i = 0; i < 4; i++) {
 
             var second = new mojs.Shape({
                 parent: first.el,
                 shape: 'circle',
                 radius: { 0: "rand(0,30)" },
-                stroke:  colors[i] ,
+                stroke: colors[i],
                 strokeWidth: { 10: 0 },
                 fill: "none",
-                left:"50%", top:"50%",
-                x:"rand(-50,50)",
-                y:"rand(-50,50)",
-                delay:300
+                left: "50%", top: "50%",
+                x: "rand(-50,50)",
+                y: "rand(-50,50)",
+                delay: 300
             });
-
-
             seconds.push(second);
         }
 
@@ -49,12 +47,11 @@
                 x: e.pageX,
                 y: e.pageY
             }).replay();
-            for (var i=0;i<seconds.length;i++){
+            for (var i = 0; i < seconds.length; i++) {
                 seconds[i].generate().replay();
             }
         })
     </script>
-
 </body>
 
 </html>
